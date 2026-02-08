@@ -12,4 +12,10 @@ COPY src /app/src
 
 WORKDIR /app/src
 ENV WORKERS 2
-CMD supervisord -c supervisord.conf
+
+# --- Auto-Generated Entrypoint Configuration ---
+COPY entrypoint.sh /entrypoint.sh
+RUN chmod +x /entrypoint.sh
+RUN mkdir -p /var/log && touch /var/log/app.log
+EXPOSE 5000
+ENTRYPOINT ["/entrypoint.sh"]
