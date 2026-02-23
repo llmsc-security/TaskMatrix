@@ -1,6 +1,6 @@
 langchain==0.0.101
-torch==2.0.1
-torchvision==0.15.2
+torch>=2.4
+torchvision>=0.19
 wget==3.2
 accelerate
 addict
@@ -14,6 +14,9 @@ imageio
 imageio-ffmpeg
 invisible-watermark
 kornia
+# groundingdino installed from GitHub in Dockerfile
+segment-anything
+matplotlib
 numpy
 omegaconf
 open_clip_torch
